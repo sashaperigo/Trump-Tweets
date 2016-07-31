@@ -191,7 +191,6 @@ class TwitterSearchImpl(TwitterSearch):
         :param max_tweets: Maximum number of tweets to collect for this example
         """
         super(TwitterSearchImpl, self).__init__(rate_delay, error_delay)
-        self.csv_file = csv_file
         self.writer = csv_writer
 
     def save_tweets(self, tweets):
@@ -213,7 +212,6 @@ class TwitterSearchImpl(TwitterSearch):
 if __name__ == '__main__':
     with open(OUT_FILE, "w") as f:
         writer = csv.writer(f)
-        self.writer.writerow(["Text", "Date", "Favorites", "Retweets",
-                              "Tweet ID"])
-        twit = TwitterSearchImpl(0.5, 5, writer)
+        writer.writerow(["Text", "Date", "Favorites", "Retweets", "Tweet ID"])
+        twit = TwitterSearchImpl(0, 5, writer)
         twit.search("from:realdonaldtrump")
