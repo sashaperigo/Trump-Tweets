@@ -16,7 +16,7 @@ from time import sleep
 
 __author__ = 'Tom Dickinson'
 
-OUT_FILE = "/Users/sashaperigo/Desktop/trump_tweets.csv"
+OUT_FILE = "trump_tweets.csv"
 
 
 class TwitterSearch:
